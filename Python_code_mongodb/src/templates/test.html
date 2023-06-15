@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="../static/test.css" />
+  </head>
+  <!--this is a comment for understanding the code in a better way-->
+  <!--The Method used is "post" and the values are being passed using the "name" -->
+  <!--we used id as a way to pass values from the input to the javascript function "myfunction"-->
+  <!--The reason we have a javascript function as we want to check if the recieved values from the input are correct or not , for this we have setup a alert with the values to verify if things are correct or not. -->
+  <!--While using the page in production please comment out the JavaScript section as we no longer need the alerts. -->
+
+  <body>
+    <section class="container">
+      <header>Some Fun Questions</header>
+      <form action="#" class="form" method="post">
+        <div class="input-box">
+          <label>Name</label>
+          <input  id="frm1" name="name" type="text" placeholder="Enter full name" required />
+        </div>
+
+        <div class="input-box" >
+          <label>Email Address</label>
+          <input id="frm2" name="email" type="text" placeholder="Enter email address" required />
+        </div>
+          <div class="input-box" >
+            <label>Your favorite color</label>
+            <input id="frm3" name="color" type="text" placeholder="Enter Your favorite color" required />
+          </div>
+        <div class="input-box" >
+            <label>Your favorite food</label>
+            <input id="frm4" name="food" type="text" placeholder="Enter Your favorite food" required />
+          </div>
+        <button onclick="myFunction()">Submit</button>
+        <button class="data_button">
+          <a   href="data"> Click to check the Data </a>
+        </button>
+        <!--Note: the above onclick="myfunction() will trigger when the submit button is hit."-->
+      </form>
+
+      <!--we will define the hyperlink to our data page.-->
+      <!-- <button type="button">Check the Data Entered</button>
+      <a href="data"> data </a> -->
+      
+
+      
+    
+    </section>
+    <!--At the time of using the code in production please commet out the  below js function and also remove the onclick="myFunction()"-->
+    <script>
+        function myFunction(){
+            let name = document.querySelector("#frm1");
+            let email = document.querySelector("#frm2");
+            let color = document.querySelector("#frm3");
+            let food = document.querySelector("#frm4");
+            alert(name.value + "    " +email.value + "    " +color.value+ "    " +food.value)
+            
+
+        }
+    </script>
+  </body>
+</html>
+
+<!--Happy coding.....-->
